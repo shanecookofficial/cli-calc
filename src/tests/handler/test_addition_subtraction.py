@@ -9,6 +9,28 @@ ADDITION
 5.3+8.7 = 14     | Addition with both decimals with integer output
 5.2+8.7 = 13.9   | Addition with both decimals with float output
 
+ADDITION - PREV RESULT
+5+5 = 10+5 = 15                      | Positive int prev result - positive int output
+5+5 = 10-15 = -5                     | Positive int prev result - negative int output
+5+5 = 10+-10 = 0                     | Positive int prev result - output of 0
+5+5 = 10+5.1 = 15.1                  | Positive int prev result - positive float output
+5+5 = 10-14.9 = -4.9                 | Positive int prev result - negative float output
+5+5.1 = 10.1+4.9 = 15                | Positive float prev result - positive int output
+5+5 = 10.1-11.1 = -1                 | Positive float prev result - negative int output
+5.1+5 = 10.1+-10.1 = 0               | Positive float prev result - output of 0
+5+5 = 10.1+1.1 = 11.2                | Positive float prev result - positive float output
+5+5 = 10.1-11.2 =-1.1                | Positive float prev result - negative float output
+-5+-5 = -10+12 = 2                   | Negative int prev result - positive int output
+-5+-5 = -10+-2 = -12                 | Negative int prev result - negative int output
+-5+-5 = -10+10 = 0                   | Negative int prev result - output of 0
+-5+-5 = -10+12.1 = 2.1               | Negative int prev result - positive float output
+-5+-5 = -10+-2.1 = -12.1             | Negative int prev result - negative float output
+-5.1+-5 = -10.1+11.1 = 1             | Negative float prev result - positive int output
+-5.1+-5 = -10.1+-1.9 = -12           | Negative float prev result - negative int output
+-5.1+-5 = -10.1+10.1 = 0             | Negative float prev result - output of 0
+-5.1+-5 = -10.1+11.2 = 1.1           | Negative float prev result - positive float output
+-5.1+-5 = -10.1+-1.1 = -11.2         | Negative float prev result - negative float output
+
 SUBTRACTION
 5-5 = 0          | Basic subtraction
 -5-5 = -10       | Subtraction with a negative
@@ -16,8 +38,30 @@ SUBTRACTION
 -5.7-3.3 = -9    | Subtraction with both decimals with integer output
 -5.3-8.3 = -13.6 | Subtraction with both decimals with float output
 
+SUBTRACTION - PREV RESULT
+10-5 = 5-2 = 3                         | Positive int prev result - positive int output
+10-5 = 5-6 = -1                        | Positive int prev result - negative int output
+10-5 = 5-5 = 0                         | Positive int prev result - output of 0
+10-5 = 5-3.9 = 1.1                     | Positive int prev result - positive float output
+10-5 = 5-6.1 = -1.1                    | Positive int prev result - negative float output
+10.1-5 = 5.1-4.1 = 1                   | Positive float prev result - positive int output
+10.1-5 = 5.1-6.1 = -1                  | Positive float prev result - negative int output
+10.1-5 = 5.1-5.1 = 0                   | Positive float prev result - output of 0
+10.1-5 = 5.1-2.3 = 2.8                 | Positive float prev result - positive float output
+10.1-5 = 5.1-8.3 = -3.2                | Positive float prev result - negative float output
+-5-5 = -10--11 = 1                     | Negative int prev result - positive int output
+-5-5 = -10-5 = -15                     | Negative int prev result - negative int output
+-5-5 = -10--10 = 0                     | Negative int prev result - output of 0
+-5-5 = -10--11.1 = 1.1                 | Negative int prev result - positive float output
+-5-5 = -10-2.3 = -12.3                 | Negative int prev result - negative float output
+-5.1-5 = -10.1--11.1 = 1               | Negative float prev result - positive int output
+-5.1-5 = -10.1-1.9 = -12               | Negative float prev result - negative int output
+-5.1-5 = -10.1--10.1 = 0               | Negative float prev result - output of 0
+-5.1-5 = -10.1--11.2 = 1.1             | Negative float prev result - positive float output
+-5.1-5 = -10.1-1.1 = -11.2             | Negative float prev result - negative float output
+
 OTHER
--5-6-7-8-9-10.543+2.1 = -43.443 | Other Scenario 1
+| Other Scenario 1
 | Other Scenario 2
 | Other Scenario 3
 | Other Scenario 4
