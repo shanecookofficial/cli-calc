@@ -12,9 +12,15 @@ class Handler():
 
     def solve(self, user_input: str) -> str:
 
-        # TODO: For any instances of "--", replace with "+" to account for a negative subtracting a negative.
-
         user_input = user_input.replace(" ", "")
+
+        # TODO: For any instances of "--", replace with "+" to account for a negative subtracting a negative.
+        user_input = list(user_input)
+        for i in range(len(user_input)-2, -1, -1):
+            if user_input[i] == "-" and user_input[i+1] == "-":
+                user_input[i] = "+"
+                del user_input[i+1]
+        user_input = "".join(user_input)
 
         if user_input[0] in ["+", "-"]:
             user_input = self.get_prev_output() + user_input
