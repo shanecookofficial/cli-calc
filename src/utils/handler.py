@@ -2,17 +2,28 @@ class Handler():
     
     def __init__(self) -> None:
         
-        self.__prev_output = None
+        self.__prev_output = "0"
 
-    def get_prev_output(self):
-        return self.__prev_input
+    def get_prev_output(self) -> str:
+        return self.__prev_output
     
-    def set_prev_output(self, output: str):
-        self.__prev_input = output
+    def set_prev_output(self, output: str) -> None:
+        self.__prev_output = output
 
     def solve(self, user_input: str) -> str:
 
         user_input = user_input.replace(" ", "")
+
+        # TODO: For any instances of "--", replace with "+" to account for a negative subtracting a negative.
+        user_input = list(user_input)
+        for i in range(len(user_input)-2, -1, -1):
+            if user_input[i] == "-" and user_input[i+1] == "-":
+                user_input[i] = "+"
+                del user_input[i+1]
+        user_input = "".join(user_input)
+
+        if user_input[0] in ["+", "-"]:
+            user_input = self.get_prev_output() + user_input
 
         # Parenthesis
 
@@ -23,7 +34,7 @@ class Handler():
         # Addition & Subtraction
         output = self.add_sub(user_input)
 
-        self.set_prev_output = output
+        self.set_prev_output(output) 
         return output
 
     def add_sub(self, user_input: str):
